@@ -9,9 +9,10 @@ pipeline {
 		stage('Test') {
 			steps {
 				echo 'TEST'
+				sh '/bin/nc -vz localhost 8080'
 			}
 		}
-		stage('Deploy') {
+		stage('Push Registry') {
 			steps {
 				echo 'DEPLOY'
 			}
