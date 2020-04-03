@@ -3,19 +3,17 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-			 sh 'docker build -t app:test .'
+			 sh 'docker build -t app .'
 			}
 		}
 		stage('Test') {
 			steps {
 				echo 'TEST'
-				sh '/bin/nc -vz localhost 80'
 			}
 		}
 		stage('Push Registry') {
 			steps {
-				sh 'docker tag app:test app:stable'
-				sh 'docker push app:test app:stable'
+			echo 'DEPLOY'
 			}
 		}
 	}
