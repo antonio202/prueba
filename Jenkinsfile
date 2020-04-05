@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-			 sh 'docker build -t app1 .'
+			 sh 'docker build -t app_prueba .'
 			}
 		}
 		stage('Test') {
@@ -11,7 +11,7 @@ pipeline {
 				echo 'TEST'
 			}
 		}
-		stage('Push Registry') {
+		stage('Deploy') {
 			steps {
 			echo 'DEPLOY'
 			}
