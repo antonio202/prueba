@@ -8,6 +8,6 @@ RUN mkdir /descargas
 RUN wget -P /descargas https://github.com/antonio202/prueba/archive/master.zip
 RUN ls /descargas
 RUN unzip /descargas/master.zip
-RUN cp /prueba-master /usr/share/nginx/html/
+RUN cp -r /prueba-master /usr/share/nginx/html/
 RUN ls /usr/share/nginx/html/
 EXPOSE 80
