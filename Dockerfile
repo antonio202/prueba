@@ -5,6 +5,6 @@ RUN apt-get update
 RUN apt-get install -y wget
 RUN apt-get install -y zip
 RUN mkdir /descargas
-RUN wget https://github.com/antonio202/prueba/archive/master.zip /descargas
+RUN wget -P /descargas https://github.com/antonio202/prueba/archive/master.zip
 RUN unzip prueba-master.zip /usr/share/nginx/html/
 EXPOSE 80
