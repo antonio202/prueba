@@ -7,5 +7,5 @@ RUN apt-get install -y zip
 RUN mkdir /descargas
 RUN wget -P /descargas https://github.com/antonio202/prueba/archive/master.zip
 RUN ls /descargas
-RUN unzip /descargas/prueba-master.zip /usr/share/nginx/html/
+RUN unzip /descargas/master.zip /usr/share/nginx/html/
 EXPOSE 80
