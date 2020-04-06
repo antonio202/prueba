@@ -9,5 +9,5 @@ RUN wget -P /descargas https://github.com/antonio202/prueba/archive/master.zip
 RUN ls /descargas
 RUN unzip /descargas/master.zip
 RUN ls /descargas
-RUN ip a
+RUN ls /
 EXPOSE 80
