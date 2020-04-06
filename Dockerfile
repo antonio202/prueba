@@ -1,5 +1,4 @@
 FROM nginx:latest
-COPY startbootstrap-resume-gh-pages /usr/share/nginx/html/
 RUN rm -r /usr/share/nginx/html/index.html
 RUN apt-get update
 RUN apt-get install -y wget
@@ -9,6 +8,6 @@ RUN wget -P /descargas https://github.com/antonio202/prueba/archive/master.zip
 RUN ls /descargas
 RUN unzip /descargas/master.zip
 RUN cd /prueba-master
-RUN cp -r * /usr/share/nginx/html/
+RUN mv * /usr/share/nginx/html/
 RUN ls /usr/share/nginx/html/
 EXPOSE 80
