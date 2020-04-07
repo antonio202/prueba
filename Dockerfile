@@ -1,5 +1,5 @@
 FROM nginx:latest
-RUN rm -r /usr/share/nginx/html/index.html
+RUN rm -r /usr/share/nginx/html/*
 RUN apt-get update
 RUN apt-get install -y wget
 RUN apt-get install -y zip
