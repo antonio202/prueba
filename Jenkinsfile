@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-			 sh 'docker build -t app_prueba .'
+			 sh 'docker build -t app_prueba1 .'
 			}
 		}
 		stage('Test') {
