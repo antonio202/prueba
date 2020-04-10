@@ -16,7 +16,6 @@ pipeline {
 		}
 		stage('Push registry') {
 			steps {
-			withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'password', usernameVariable: 'user')])
 			sh 'docker tag app:test antjos/app:stable'
 			sh 'docker push antjos/app:stable'
 			}
