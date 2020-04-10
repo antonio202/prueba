@@ -9,7 +9,7 @@ pipeline {
 		stage('Test') {
 			steps {
 				echo 'TEST'
-				sh 'docker run --rm --name app -id -p 80:80 app:test'
+				sh 'docker run -it app'
 				sh 'nc -vz localhost 80'
 				sh 'docker stop app'
 			}
