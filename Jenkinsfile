@@ -13,7 +13,7 @@ pipeline {
 		}
 		stage('Push registry') {
 			steps {
-				echo 'Deploy
+				echo 'Deploy'
 				}
 			}
 		}
