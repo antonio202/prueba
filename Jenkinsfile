@@ -14,7 +14,6 @@ pipeline {
 		stage('Push registry') {
 			steps {
 				echo 'Deploy'
-				}
 			}
 		}
 	}
