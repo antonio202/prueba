@@ -9,7 +9,7 @@ pipeline {
 		stage('Test') {
 			steps {
 				echo 'TEST'
-				echo 'PRUEBA'
+				echo 'PRUEBA1'
 			}
 		}
 		stage('Push registry') {
