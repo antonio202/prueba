@@ -25,7 +25,7 @@ pipeline {
 		}
 		stage('Initiate') {
 			steps {
-				sh 'docker run --rm --name app -id -p 80:80 antjos/app'
+				sh 'docker run --rm --name app -id -p 80:80 app:test'
 				sh 'nc -vz localhost 80'
 			}
 		}
