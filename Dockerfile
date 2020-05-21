@@ -103,6 +103,7 @@ VOLUME /data/db /data/configdb
 
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-
+RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
+    && ln -s /usr/local/bin/docker-entrypoint.sh /
 EXPOSE 27017
 CMD ["mongod"]
