@@ -12,21 +12,6 @@ RUN ls /usr/share/nginx/html/
 EXPOSE 80
 
 #####################################################################
-# broadtech/debian-stretch-mongodb
-# This Dockerfile creats an image that deploys MongoDB
-# on Debian Linux ( Stretch )
-# To deploy MongoDB on Stretch run a single command
-#
-#     $ sudo docker run broadtech/debian-stretch-mongodb
-#
-# To run MongoDB in the background use the -d option
-#
-#     $ sudo docker run -d broadtech/debian-stretch-mongodb
-#
-# You could use this Dockerfile to create your own docker image
-
-# Base image
-FROM debian
 
 LABEL "vendor"="BroadTech Innovations PVT LTD"
 LABEL "vendor.url"="http://www.broadtech-innovations.com/"
