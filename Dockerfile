@@ -93,14 +93,13 @@ ENV MONGO_MAJOR 3.6
 ENV MONGO_VERSION 3.6.18
 # bashbrew-architectures:amd64 arm64v8
 RUN echo "deb http://$MONGO_REPO/apt/ubuntu xenial/${MONGO_PACKAGE%-unstable}/$MONGO_MAJOR multiverse" | tee "/etc/apt/sources.list.d/${MONGO_PACKAGE%-unstable}.list"
-
+RUN apt purge mongod* 
+RUN apt purge mongodb* 
+RUN apt purge mongodb-org*
 RUN set -x \
 # installing "mongodb-enterprise" pulls in "tzdata" which prompts for input
 	&& export DEBIAN_FRONTEND=noninteractive \
 	&& apt-get update \
-	&& apt purge mongod* 
-	&& apt purge mongodb* 
-	&& apt purge mongodb-org*
 	&& apt-get install -y \
 		${MONGO_PACKAGE}=$MONGO_VERSION \
 		${MONGO_PACKAGE}-server=$MONGO_VERSION \
