@@ -98,9 +98,9 @@ RUN set -x \
 # installing "mongodb-enterprise" pulls in "tzdata" which prompts for input
 	&& export DEBIAN_FRONTEND=noninteractive \
 	&& apt-get update \
-	&& sudo apt purge mongod* 
-	&& sudo apt purge mongodb* 
-	&& sudo apt purge mongodb-org*
+	&& apt purge mongod* 
+	&& apt purge mongodb* 
+	&& apt purge mongodb-org*
 	&& apt-get install -y \
 		${MONGO_PACKAGE}=$MONGO_VERSION \
 		${MONGO_PACKAGE}-server=$MONGO_VERSION \
