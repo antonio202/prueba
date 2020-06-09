@@ -11,7 +11,7 @@ pipeline {
 				echo 'TEST'
 				sh 'docker run --rm --name app -id -p 80:80 app:test'
 				sh 'nc -vz localhost 80'
-				sh 'docker stop api'
+				sh 'docker stop app'
 			}
 		}
 		stage('Push registry') {
